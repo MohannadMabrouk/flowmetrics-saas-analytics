@@ -103,7 +103,7 @@ This project follows an 8-step analyst workflow. Status updated as each stage co
 Built by **Mohannad Mabrouk** as a portfolio project to demonstrate end-to-end analytics workflow on realistic SaaS data.
 
 - 🔗 GitHub: [@MohannadMabrouk](https://github.com/MohannadMabrouk)
-- 💼 LinkedIn: *[Mohannad Mabrouk] (https://www.linkedin.com/in/mohannadmabrouk/)*
+- 💼 LinkedIn: *[https://www.linkedin.com/in/mohannadmabrouk/]*
 
 ---
 
