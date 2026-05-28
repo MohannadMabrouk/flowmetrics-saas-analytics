@@ -1,6 +1,6 @@
 # Data Quality Findings
 
-Profiling results from `python/01_data_quality.ipynb`. Each check was run against the loaded MySQL database (~389,000 rows across 6 tables). Findings below are documented for transparency and to inform the cleaning decisions applied in `02_data_cleaning.ipynb`.
+Profiling results from [`01_data_quality.ipynb`](01_data_quality.ipynb). Each check was run against the loaded MySQL database (~389,000 rows across 6 tables). Findings below are documented for transparency and to inform the cleaning decisions applied in `02_data_cleaning.ipynb`.
 
 ## Summary
 
