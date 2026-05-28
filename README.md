@@ -6,7 +6,7 @@ End-to-end analytics on a 2-year B2B SaaS dataset. Built with **SQL · Python ·
 
 ---
 
-## 📋 Project Brief
+##project-brief
 
 ### The business
 
@@ -78,11 +78,57 @@ This project follows an 8-step analyst workflow. Status updated as each stage co
 | 1. Understand business context | ✅ Done | This README, "Project Brief" above |
 | 2. Understand the data |  ✅ Done | Data dictionary (below, expanding) |
 | 3. Profile data quality |  ✅ Done |[`01_data_quality.ipynb`](01_data_quality.ipynb) |
-| 4. Define questions clearly | ⬜ Not started | "Business Questions" section (below) |
+| 4. Define questions clearly | ✅ Done | "Business Questions" section (below) |
 | 5. Clean and prepare data | ⬜ Not started | `python/02_data_cleaning.ipynb` |
 | 6. Exploratory analysis | ⬜ Not started | `python/03_exploratory_analysis.ipynb` |
 | 7. Answer the questions | ⬜ Not started | `sql/` queries + analysis notebooks |
 | 8. Communicate findings | ⬜ Not started | Findings section + Power BI dashboard |
+
+---
+
+##-business-questions
+
+This analysis is structured around a focused set of questions, each chosen to help the VP of Customer Success decide **where to invest to reduce churn.** The questions move from sizing the problem, to locating it, to explaining it.
+
+### The investigation logic
+
+```
+Q1: How big is the problem?        →  size it
+Q2–Q3: Where is churn concentrated? →  locate it (country, plan)
+Q4: What behavior drives churn?     →  explain it (engagement)
+```
+
+---
+
+### Q1 — How big is the churn problem?
+
+**Question:** What is the overall customer churn rate over the two-year period, and how has it trended month over month?
+**Metric:** Churn rate = customers who churned during a period ÷ customers active at the start of that period. Reported as an overall figure and as a monthly trend line.
+**Why it matters:** You can't prioritize an investment without knowing the scale of the problem. The monthly trend also reveals whether churn is stable, worsening, or spiking in specific periods.
+
+---
+
+### Q2 — Is churn concentrated in specific countries?
+
+**Question:** Do certain countries have materially higher churn rates than others?
+**Metric:** Churn rate broken down by country, compared against the overall average to surface outliers.
+**Why it matters:** If churn is geographically concentrated, the lever may be region-specific — local support coverage, localization, or market fit. A country running far above average is a targeted, actionable finding.
+
+---
+
+### Q3 — Which subscription plans have the highest churn?
+
+**Question:** Which plan tiers lose customers fastest?
+**Metric:** Churn rate by plan (Starter, Pro, Business, Enterprise).
+**Why it matters:** If a specific plan churns disproportionately, the response could be improving that plan's value, adjusting its pricing, or proactively guiding those customers toward stickier tiers. *Caveat to test in analysis: plan-level churn may be a proxy for company size or engagement rather than a driver in itself.*
+
+---
+
+### Q4 — Do less-engaged customers churn more?
+
+**Question:** Are customers who use the product less likely to churn?
+**Metric:** Compare engagement between churned and retained customers, measured as **events per active month** (total feature events ÷ months active) to normalize for how long each customer has been around. Bucket customers into engagement tiers and compare churn rates across tiers.
+**Why it matters:** This is the most directly actionable driver. If low engagement predicts churn, the lever is onboarding and product adoption — getting customers to value faster. *Note: raw total event counts are confounded by tenure, so the metric normalizes by active time.*
 
 ---
 
