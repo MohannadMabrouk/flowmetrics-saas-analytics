@@ -47,7 +47,7 @@ All other checks passed. Nulls present in the data are informative (active subsc
 ## What this means going forward
 
 - **Revenue analysis is safe to run directly** — no duplicates, nulls, or anomalies in `subscriptions` or `payments.`
-- **User-level analysis requires the 8 duplicates to be dropped first** — built into `02_data_cleaning.ipynb`
+- **User-level analysis requires the 8 duplicates to be dropped first** — built into [`02_data_cleaning.sql`](02_data_cleaning.sql)
 - **CSAT analysis must exclude nulls explicitly** — using `WHERE csat_score IS NOT NULL` rather than letting AVG silently skip them
 - **Email-based joins or grouping must normalize first** — using `LOWER(TRIM(email))` to catch the 189 whitespace cases
 
