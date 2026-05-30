@@ -12,6 +12,7 @@ Profiling results from [`01_data_quality.ipynb`](01_data_quality.ipynb). Each ch
 | 2.2b | **Content-level user duplicates** (same `customer_id` + `email`) | **8 cases** | ⚠️ Medium | Drop duplicates in cleaning step, keeping first occurrence per (customer_id, email) |
 | 2.3 | Duplicate `subscription_id` | 0 | ✅ None | No action |
 | 2.4 | Duplicate `payment_id` | 0 | ✅ None | No action |
+| 2.4b | Content-level payment duplicates (same customer_id + subscription_id + invoice_date + amount) | 5 cases | ⚠️ Medium | Drop duplicates in cleaning step... ~$760 of double-counted revenue |
 | 2.5 | Duplicate `ticket_id` | 0 | ✅ None | No action |
 | 3.x | Foreign key orphans (all 5 checks) | 0 across all child tables | ✅ None | No action |
 | 4.1 | Nulls in `customers` | 0 nulls in any column | ✅ None | No action |
