@@ -2,7 +2,7 @@
 
 End-to-end analytics on a 2-year B2B SaaS dataset. Built with **SQL · Python · Power BI** to investigate churn drivers and recommend retention investments.
 
-> 🟡 **Project status: in progress.** Working through an 8-step analyst workflow. Steps 2–8 will be added as the analysis progresses.
+> 🟡 **Project status: in progress.** Working through an 8-step analyst workflow.
 
 ---
 
@@ -10,13 +10,12 @@ End-to-end analytics on a 2-year B2B SaaS dataset. Built with **SQL · Python ·
 
 ### The business
 
-**FlowMetrics** is a fictional B2B project management SaaS (similar in flavor to ClickUp, Asana, or Monday). The company monetizes via per-account subscriptions across five tiers — Free Trial, Starter, Pro, Business, and Enterprise — sold globally with concentration in the US and Europe. Revenue depends on three levers: **acquiring** new customers, **converting** trials to paid, and **retaining** paid accounts month-over-month. Churn directly reduces Monthly Recurring Revenue (MRR).
+**FlowMetrics** is a fictional B2B project management SaaS (similar to ClickUp, Asana, or Monday). The company monetizes via per-account subscriptions across five tiers — Free Trial, Starter, Pro, Business, and Enterprise — sold globally with concentration in the US and Europe. Revenue depends on three levers: **acquiring** new customers, **converting** trials to paid, and **retaining** paid accounts month-over-month. Churn directly reduces Monthly Recurring Revenue (MRR).
 
 ### The stakeholder
 
 **Primary audience:** the VP of Customer Success.
 **Secondary readers:** customer-success team leads (who would execute the resulting retention plays) and the CFO (who would approve any associated investment).
-None of the readers are deeply technical, so findings are reported in plain language with dollar impact where relevant.
 
 ### The decision this analysis informs
 
@@ -46,7 +45,7 @@ The analysis fails if the VP's response is *"interesting, but what do I do with 
 
 | Layer | Tools |
 |-------|-------|
-| Data storage | MySQL (alternative: SQLite) |
+| Data storage | MySQL |
 | Analysis | Python (pandas, matplotlib, seaborn), Jupyter |
 | Querying | SQL (joins, window functions, CTEs) |
 | Visualization | Power BI |
@@ -71,7 +70,7 @@ Two years of synthetic operational data (June 2023 – May 2025):
 
 ## Analytical Workflow
 
-This project follows an 8-step analyst workflow. Status updated as each stage completes.
+This project follows an 8-step analyst workflow. Status is updated as each stage is completed.
 
 | Step | Status | Artifact |
 |------|--------|----------|
