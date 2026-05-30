@@ -78,7 +78,7 @@ This project follows an 8-step analyst workflow. Status is updated as each stage
 | 2. Understand the data |  ✅ Done | [The Dataset](#the-dataset) |
 | 3. Profile data quality |  ✅ Done |[`01_data_quality.ipynb`](01_data_quality.ipynb) |
 | 4. Define questions clearly | ✅ Done | [Business Questions](#business-questions) |
-| 5. Clean and prepare data | ⬜ Not started | `02_data_cleaning.ipynb` |
+| 5. Clean and prepare data | ✅ Done | [`02_data_cleaning.sql`](02_data_cleaning.sql)|
 | 6. Exploratory analysis | ⬜ Not started | `03_exploratory_analysis.ipynb` |
 | 7. Answer the questions | ⬜ Not started | `sql/` queries + analysis notebooks |
 | 8. Communicate findings | ⬜ Not started | Findings section + Power BI dashboard |
